@@ -10,6 +10,7 @@
 | **Pluralist** | Policy emerges from competition and bargaining among many **organised interest groups**. No single group dominates; power is dispersed among them. |
 | **Elite** | A small, wealthy, well-educated minority holds disproportionate influence. Ordinary citizens participate mainly by choosing between elites at elections. |
 | **How they relate** | They are **descriptive models**, not systems of government — three lenses on the same country. All three are partly right, which is why all three survive. |
+| **The easy confusion** | Participatory and pluralist both say power is spread widely, so they run together. The difference is the **unit**: individual citizens acting on decisions, versus organisations bargaining over them. [Full separation below](#participatory-and-pluralist-are-not-two-names-for-the-same-thing). |
 | **Common mistake** | Treating them as three *kinds* of democracy you could pick between, like direct and representative. They are competing explanations of one system. And the exam almost never asks for the definition alone — it asks which **constitutional provision** supports which model. |
 
 ## From the class notes
@@ -27,6 +28,42 @@ What follows is expansion, not correction: the piece the notes are missing is th
 ---
 
 ## The full picture
+
+### Participatory and pluralist are not two names for the same thing
+
+They blur together because both are **anti-elite**: both say influence is spread widely rather than held by a few. Lay the three models on one line — everyone (participatory) → many organised groups (pluralist) → a small few (elite) — and the two sit side by side. Adjacent is not identical.
+
+Four questions separate them cleanly:
+
+| | **Participatory** | **Pluralist** |
+|---|---|---|
+| **Who acts?** | The individual citizen | The organised group — a union, a trade association, the NRA, the NAACP, AARP |
+| **How does the act reach policy?** | Directly: the citizen votes on the measure itself, or turns out in numbers an official cannot ignore | Indirectly: the group bargains with rival groups and pressures government, and *government* decides |
+| **What must be true for the model to be working?** | **Breadth** — a lot of people engaged | **Competition** — a lot of groups, none dominant, and low barriers to forming a new one |
+| **What is the nightmare?** | Apathy: a public that has checked out | Capture: one interest with no counterweight |
+
+The third row is the decisive one, because those two conditions are **independent** — either can hold while the other fails. Picture a country where 12% of adults ever do anything political, but 20,000 registered lobbies fight furiously across every issue. That is a *thriving pluralist* democracy and a *failing participatory* one, at the same moment, on the same facts. Two models exist because they make two different empirical claims about the same country, and those claims can come out differently.
+
+That is also why the same act can count for both: joining an interest group is a participatory act by the citizen *and* the raw material of pluralist bargaining. What differs is not always the behaviour — it is the account of how that behaviour turns into policy.
+
+### The second model was coined against the first
+
+The historical answer to "why two definitions" is that participatory democracy was formulated as a **rebuttal** of pluralism, not as a synonym for it.
+
+Pluralism is the older, and it is **descriptive** — a claim about how the United States actually works. David Truman (*The Governmental Process*, 1951) and Robert Dahl (*Who Governs?*, 1961) were answering elite theory: look at who really decides, and you find different groups winning on different issues. The postwar political science around them went further, holding that mass participation is not necessary for a healthy democracy and that an intensely mobilised citizenry might even destabilise one. Democracy is safe because the *groups* compete, whatever individuals do.
+
+Participatory theory is younger and **normative** — a claim about what democracy owes its citizens. Its authors thought pluralism had defined democracy down to something too small to deserve the name. The **Port Huron Statement** (1962) demanded a society in which individuals share in the decisions that shape their lives. Carole Pateman's *Participation and Democratic Theory* (1970) took direct aim at Dahl's school, arguing that participation is not merely a means to good policy but the thing that *makes* a citizen — you learn democracy by doing it. Benjamin Barber's *Strong Democracy* (1984) filed pluralist democracy under "thin" democracy by name.
+
+So the overlap is not an accident of sloppy definition. One model is an argument about how the system does work; the other is an argument that working that way is not good enough. Both can be true at once, which is exactly why the course keeps both.
+
+### The exam tell: individual, or organisation?
+
+On a stimulus question, find the actor.
+
+- A ballot initiative, a town hall, a protest turnout, a suffrage amendment, high voter registration → **participatory**.
+- An interest group, a union, a PAC, a lobbyist, an amicus brief, an iron triangle → **pluralist**.
+
+The one genuinely ambiguous case is **joining or funding a group** — which is why the class notes list "funding causes" under participatory and "interest groups, labor unions" under pluralist, and both are right. If a question turns on it, ask what the sentence is *about*: the citizen's act of taking part, or the group's leverage over the outcome.
 
 ### The move the exam is really testing
 

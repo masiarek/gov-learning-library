@@ -9,8 +9,11 @@ Confederation") have a fixed casing no naive title-caser gets right.
 
 Two jobs:
 
-1. **Clean section labels** — unit folders get their College Board names, topic
-   folders get title-cased names with overrides.
+1. **Clean section labels** — unit folders get their College Board names, and a
+   topic folder takes its README's `# H1`, which is authored: a title-caser
+   working from `shays_rebellion` cannot put the apostrophe back, and would turn
+   `marbury_v_madison` into "Marbury V Madison". A folder with no H1 falls back
+   to its title-cased name.
 2. **Order the root nav** — ``NAV_ORDER`` pins the reading order of the
    top-level entries; anything unlisted keeps its alphabetical slot after them.
 
@@ -35,14 +38,10 @@ SECTION_LABELS = {
     "05_Political_Participation": "Unit 5 · Political Participation",
 }
 
-# Whole-folder-name overrides for topic slugs the word-level pass can't fix.
+# Labels that are not the folder's own H1: the class-notes days, which take the
+# unit labels' "·" and a shorter name than their H1. Every other topic folder is
+# labelled with its README's H1 -- see `_label`.
 NAME_OVERRIDES = {
-    "shays_rebellion": "Shays' Rebellion",
-    "common_sense": "Common Sense",
-    "road_to_independence": "The Road to Independence",
-    "first_continental_congress": "The First Continental Congress",
-    "declaration_of_independence": "The Declaration of Independence",
-    "articles_of_confederation": "The Articles of Confederation",
     "01_declaring_independence": "08/26 · Declaring Independence",
     "02_classifications_and_the_articles": "08/27 · Government & the Articles",
     "03_democracy_and_ideals": "Democracy & the Ideals",
@@ -112,6 +111,25 @@ def _pretty(name: str) -> str:
     return " ".join(words)
 
 
+def _readme_h1(section) -> str:
+    """The `# H1` of a section's own README.md, read from disk ("" if none)."""
+    for child in section.children:
+        page_file = getattr(child, "file", None)
+        if page_file is not None and page_file.src_path.rsplit("/", 1)[-1] == "README.md":
+            with open(page_file.abs_src_path, encoding="utf-8") as fh:
+                for line in fh:
+                    if line.startswith("# "):
+                        return line[2:].strip()
+    return ""
+
+
+def _label(section, name: str) -> str:
+    """A curated label first, then the section README's H1, then the folder name."""
+    if name in SECTION_LABELS or name in NAME_OVERRIDES:
+        return _pretty(name)
+    return _readme_h1(section) or _pretty(name)
+
+
 def _dir_of(item) -> str:
     """TOP-LEVEL on-disk name of a nav item — used only for root nav ordering."""
     if hasattr(item, "file") and item.file is not None:
@@ -143,7 +161,7 @@ def _relabel(items, depth: int = 0) -> None:
             parts = _first_src(item).split("/")
             if depth < len(parts) - 1:
                 name = parts[depth]
-                item.title = _pretty(name)
+                item.title = _label(item, name)
                 _order_children(item, name, depth + 1)
             _relabel(item.children, depth + 1)
 
